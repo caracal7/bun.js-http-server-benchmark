@@ -1,38 +1,39 @@
 # Install
-
+```
 curl -fsSL https://bun.sh/install | bash
-npm init
 
+npm init
+```
 and install **wrk** :)
 
 # Run Bun
-
+```
 bun bun.ts
-
+```
 in another terminal
-
+```
 wrk -t4 -c2500 -d60s http://localhost:3000
-
+```
 # Run NodeJs
-
+```
 node node.js
-
+```
 in another terminal
-
+```
 wrk -t4 -c2500 -d60s http://localhost:3000
-
+```
 # Run uWebSockets
-
+```
 node uws.js
-
+```
 in another terminal
-
+```
 wrk -t4 -c2500 -d60s http://localhost:3000
-
+```
 # Results
 
 ## Bun
-
+```
 4 threads and 2500 connections
 Thread Stats   Avg      Stdev     Max   +/- Stdev
   Latency     1.84ms  677.59us  51.62ms   98.15%
@@ -41,10 +42,10 @@ Thread Stats   Avg      Stdev     Max   +/- Stdev
 Socket errors: connect 2253, read 66743, write 0, timeout 0
 Requests/sec: 131794.88
 Transfer/sec:     10.31MB
-
+```
 
 ## NodeJs
-
+```
 Running 1m test @ http://localhost:3000
   4 threads and 2500 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -54,9 +55,9 @@ Running 1m test @ http://localhost:3000
   Socket errors: connect 2253, read 76, write 0, timeout 0
 Requests/sec:  42345.45
 Transfer/sec:      5.09MB
-
+```
 ## uWebSockets
-
+```
 Running 1m test @ http://localhost:3000
   4 threads and 2500 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
@@ -66,3 +67,5 @@ Running 1m test @ http://localhost:3000
   Socket errors: connect 2253, read 90, write 0, timeout 0
 Requests/sec: 108457.71
 Transfer/sec:      6.10MB
+```
+`
